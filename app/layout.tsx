@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -30,7 +31,18 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <nav className="w-full flex justify-center p-3 bg-gray-100 border-b border-gray-200">
+          <div className="w-3xl flex justify-between">
+            <Link href="/search" passHref>
+              <button className="bg-black text-white p-2 rounded">Busca</button>
+            </Link>
+            <Link href="/admin" passHref>
+              <button className="bg-black text-white p-2 rounded">Admin</button>
+            </Link>
+          </div>
+        </nav>
+        {children}</body>
     </html>
   );
 }
