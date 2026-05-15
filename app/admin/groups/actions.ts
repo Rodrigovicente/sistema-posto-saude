@@ -1,6 +1,6 @@
 'use server';
 
-import { db } from '@/db/connection';
+import { db } from '../../../db/connection';
 import { groups, streets, addressIntervals } from '@/db/schema';
 import { eq } from 'drizzle-orm';
 import { Interval, Parity } from '../../types/interval';
