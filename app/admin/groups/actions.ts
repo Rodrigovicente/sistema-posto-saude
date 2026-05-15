@@ -75,7 +75,7 @@ export async function addInterval(
     .where(eq(addressIntervals.streetId, streetId));
 
   const overlapping = existingIntervals.find(
-    (interval) => interval.startNumber <= endNumber && interval.endNumber >= startNumber && (parity === 'both' || interval.parity == parity)
+    (interval) => interval.startNumber <= endNumber && interval.endNumber >= startNumber && (parity === 'both' || interval.parity == 'both' || interval.parity == parity)
   );
 
   if (overlapping) {
