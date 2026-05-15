@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { AuthBar } from './admin/auth-bar';
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -33,13 +34,16 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <nav className="w-full flex justify-center p-3 bg-gray-100 border-b border-gray-200">
-          <div className="w-3xl flex justify-between">
+          <div className="w-3xl flex justify-between items-center">
             <Link href="/search" passHref>
               <button className="bg-black text-white p-2 rounded">Busca</button>
             </Link>
-            <Link href="/admin" passHref>
-              <button className="bg-black text-white p-2 rounded">Admin</button>
-            </Link>
+            <div className="flex flex-row gap-3">
+              <Link href="/admin" passHref>
+                <button className="bg-black text-white p-2 rounded">Admin</button>
+              </Link>
+              <AuthBar />
+            </div>
           </div>
         </nav>
         {children}</body>

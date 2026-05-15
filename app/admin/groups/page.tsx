@@ -58,7 +58,7 @@ export default function GroupsPage() {
                 <li key={group.id} className="flex items-center justify-between bg-gray-100 px-4 py-2 rounded">
                   <span>{group.name}</span>
               <a
-                href={`/groups/${group.id}`}
+                href={`/admin/groups/${group.id}`}
                     className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
                   >
                     {ptBrDictionary["Edit"]}

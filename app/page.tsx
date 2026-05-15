@@ -12,8 +12,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { redirect } from "next/navigation";
 
 export default function Home() {
+
+	redirect('/search')
 
 	const mockEvents: WeeklyEvent[] = [
 		{ id: '1', title: 'Daily Standup', startHour: 9, startMinute: 0, duration: 1, day: 1 },

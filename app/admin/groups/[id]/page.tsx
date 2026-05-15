@@ -116,7 +116,7 @@ export default function GroupIntervalsPage() {
       <h1 className="text-2xl font-bold mb-6">{ptBrDictionary["Add Address Intervals"]}</h1>
 
       {/* Back button */}
-      <a href="/groups" className="inline-block mb-4 text-blue-600 hover:underline">
+      <a href="/admin/groups" className="inline-block mb-4 text-blue-600 hover:underline">
         ← {ptBrDictionary["Back to Groups List"]}
       </a>
 
